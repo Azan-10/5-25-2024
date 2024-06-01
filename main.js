@@ -1,3 +1,4 @@
+"use strict";
 // // null is used when we want to empty an answer intentially ,
 // function divide(a:number,b:number){
 //     let ans = 0
@@ -11,14 +12,18 @@
 //     console.log(a)
 // else
 // console.log("invalid operation")
-var wahidOrder = {
+let wahidOrder = {
     food: "Biryani",
 };
-var tahaOrder = {
+let tahaOrder = {
     food: "burger",
     drink: "cocacola"
 };
-var wahidTable = tahaOrder;
-var tahaTable = wahidOrder;
-console.log(wahidTable);
-console.log(tahaTable);
+// stale obj case
+let wahidTable = tahaOrder;
+//fresh object case giva an eror when we add properties
+let wahidTableFresh = {
+    food: "Biryani",
+    drink: "cocacola,"
+};
+let tahaTable = tahaOrder;
